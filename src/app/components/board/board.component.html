@@ -1,0 +1,24 @@
+<div>Playing Option: <select name="player" id="#" (change)="selectedStatus($event);handleReset();">
+    <option selected="selected" value="one">Play with computer</option>
+    <option value="two">Play with human</option>
+  
+    </select> </div>
+<div>Current Player: {{xTurn ? "X" : "O"}}</div>
+<div class="container">
+    <div class="divRow">
+        <app-square [winColor]="winner[0]" (click)="markSelection(0)" [value]="board[0]"></app-square>
+        <app-square [winColor]="winner[1]" (click)="markSelection(1)" [value]="board[1]"></app-square>
+        <app-square [winColor]="winner[2]" (click)="markSelection(2)" [value]="board[2]"></app-square>
+    </div>
+    <div class="divRow">
+        <app-square [winColor]="winner[3]" (click)="markSelection(3)" [value]="board[3]"></app-square>
+        <app-square [winColor]="winner[4]" (click)="markSelection(4)" [value]="board[4]"></app-square>
+        <app-square [winColor]="winner[5]" (click)="markSelection(5)" [value]="board[5]"></app-square>
+    </div>
+    <div class="divRow">
+        <app-square [winColor]="winner[6]" (click)="markSelection(6)" [value]="board[6]"></app-square>
+        <app-square [winColor]="winner[7]" (click)="markSelection(7)" [value]="board[7]"></app-square>
+        <app-square [winColor]="winner[8]" (click)="markSelection(8)" [value]="board[8]"></app-square>
+    </div>
+    <button (click)="handleReset()">Reset The Game</button>
+</div>
